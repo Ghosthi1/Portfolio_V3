@@ -1,0 +1,97 @@
+---
+// Replace with your real projects — aim for 3-6
+const projects = [
+  {
+    title: 'Sprite Sheet CLI Tool',
+    description: 'CLI tool that packs a collection of PNG sprites into a single atlas image and a JSON metadata file. Supports mixed file/directory input, recursive directory traversal, shelf bin-packing, and auto-calculated atlas width.',
+    tags: ['Rust', 'CLI', 'Image Processing', 'Bin Packing'],
+    github: 'https://github.com/Ghosthi1/SpriteSheetPacker_CLI',
+    demo: null,
+  },
+  {
+    title: 'The Last Vestige',
+    description: 'Top-down colony builder/defender written in Rust with Bevy. Features A* pathfinding, flow-field AI, and an ECS architecture with separate plugins per feature area.',
+    tags: ['Rust', 'Bevy', 'ECS', 'A*', 'Flow Fields'],
+    github: 'https://github.com/Ghosthi1/The_Last_Vestige',
+    demo: null,
+  },
+  {
+    title: 'Haunted Cottage Diorama',
+    description: 'Group uni project — real-time 3D diorama built with WebGPU and WGSL shaders. Custom OBJ loader, per-object transform uniforms, and interactive controls for camera, lighting, and scene elements.',
+    tags: ['WebGPU', 'WGSL', '3D Graphics', 'JavaScript'],
+    github: 'https://github.com/Ghosthi1/Uni_Graphics_Group_18',
+    demo: null,
+  },
+  {
+    title: 'Barrel — Unity Asset Pack',
+    description: 'Physics-based destructible barrel and cube props targeting the Unity Asset Store. Features explosion/implosion force, debris lifecycle management, a 3-level LOD chain, non-alloc physics APIs, and object pooling. Includes a first-person demo scene.',
+    tags: ['C#', 'Unity', 'URP', 'Physics'],
+    github: 'https://github.com/Ghosthi1/Barrel',
+    demo: null,
+    wip: true,
+  },
+  {
+    title: 'USB HID Controller',
+    description: 'Custom USB HID gamepad built on a Raspberry Pi Pico. Firmware written in Rust with Embassy, exposing physical buttons as standard controller inputs over USB.',
+    tags: ['Rust', 'Embedded', 'Raspberry Pi Pico', 'USB HID'],
+    github: null,
+    demo: null,
+  },
+];
+---
+
+<section id="projects" class="py-24 px-6 md:px-12 lg:px-24 max-w-6xl mx-auto">
+  <div class="mb-12">
+    <p class="text-orange-500 font-mono text-sm tracking-widest uppercase mb-2">Work</p>
+    <h2 class="text-4xl font-bold text-gray-50">Projects</h2>
+  </div>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {projects.map((project) => (
+      <article class="bg-gray-800 border border-gray-700 hover:border-orange-500 rounded-xl p-6 flex flex-col gap-4 transition-colors duration-200 group">
+        <div class="flex items-start justify-between gap-4">
+          <div class="flex items-center gap-2 flex-wrap">
+            <h3 class="text-lg font-semibold text-gray-50 group-hover:text-orange-500 transition-colors duration-200">
+              {project.title}
+            </h3>
+            {project.wip && (
+              <span class="text-xs font-mono px-2 py-0.5 rounded-full border border-yellow-500/40 text-yellow-400">
+                WIP
+              </span>
+            )}
+          </div>
+          <div class="flex gap-3 text-gray-500 shrink-0">
+            {project.github && (
+              <a href={project.github} target="_blank" rel="noopener" class="hover:text-orange-500 transition-colors" aria-label="GitHub">
+                <!-- GitHub icon -->
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.579.688.481C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+                </svg>
+              </a>
+            )}
+            {project.demo && (
+              <a href={project.demo} target="_blank" rel="noopener" class="hover:text-orange-500 transition-colors" aria-label="Live demo">
+                <!-- External link icon -->
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+              </a>
+            )}
+          </div>
+        </div>
+
+        <p class="text-gray-400 text-sm leading-relaxed flex-1">{project.description}</p>
+
+        <div class="flex flex-wrap gap-2">
+          {project.tags.map((tag) => (
+            <span class="text-xs font-mono px-2 py-1 bg-gray-700 text-orange-400 rounded">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
