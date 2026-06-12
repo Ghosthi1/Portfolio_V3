@@ -43,7 +43,7 @@ src/
   styles/
     global.css          # Tailwind import + @theme (font vars) + base body styles
 public/
-  CV.pdf               # Place CV here when ready
+  Callum_Forsyth_CV.pdf  # CV — linked from Hero CTA button
 ```
 
 ## Projects (current)
