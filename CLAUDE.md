@@ -43,7 +43,7 @@ src/
   styles/
     global.css          # Tailwind import + @theme (font vars) + base body styles
 public/
-  CV.pdf               # Place CV here when ready
+  Callum_Forsyth_CV.pdf  # CV — linked from Hero CTA button
 ```
 
 ## Projects (current)
@@ -56,7 +56,7 @@ Current projects:
 2. **The Last Vestige** — Rust/Bevy top-down colony builder/defender
 3. **Haunted Cottage Diorama** — WebGPU/WGSL group uni graphics project
 4. **Barrel** — C#/Unity destructible props asset pack (WIP)
-5. **USB HID Controller** — Rust/Embassy firmware on Raspberry Pi Pico (WIP, no GitHub yet)
+5. **USB HID Controller** — Rust/Embassy firmware on Raspberry Pi Pico (WIP, https://github.com/Ghosthi1/Pico_Controller)
 
 ## Skills (current)
 
