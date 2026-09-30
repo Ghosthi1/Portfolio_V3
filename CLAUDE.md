@@ -62,7 +62,7 @@ Current projects:
 
 All skill data lives in the `skillGroups` array in `Skills.astro`.
 
-- **Languages:** Rust, C#, JavaScript
+- **Languages:** Rust, C++, C#
 - **Game Dev:** Bevy, Unity, WebGPU, WGSL, ECS Architecture
 - **Embedded:** Raspberry Pi Pico, Embassy, USB HID
 - **Tooling:** Git, Linux, Cargo
