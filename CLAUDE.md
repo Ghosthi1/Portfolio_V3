@@ -54,7 +54,7 @@ All project data lives in the `projects` array in `Projects.astro`. Each entry h
 Current projects:
 1. **Sprite Sheet CLI** — Rust CLI, bin-packing sprite atlas tool
 2. **The Last Vestige** — Rust/Bevy top-down colony builder/defender
-3. **Haunted Cottage Diorama** — WebGPU/WGSL group uni graphics project
+3. **Native WebGPU Renderer** — C++/Dawn glTF renderer (https://github.com/Ghosthi1/cpp-webgpu)
 4. **Barrel** — C#/Unity destructible props asset pack (WIP)
 5. **USB HID Controller** — Rust/Embassy firmware on Raspberry Pi Pico (WIP, https://github.com/Ghosthi1/Pico_Controller)
 
